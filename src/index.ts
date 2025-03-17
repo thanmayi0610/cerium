@@ -67,8 +67,16 @@ const baseURl = "https://a90b05cb-e593-4a77-a500-82b909c678f2.mock.pstmn.io";
 
 
   try {
-    const response = await axios.get(`${baseURl}/cities`);
-    
+    //const response = await axios.get(`${baseURl}/cities`);
+    const response = await axios.post(
+      `${baseURl}/cities`,
+      {
+        title:"Buy Fruit"
+      },
+      {
+        headers: {},
+      }
+    );
 
     const statusCode = response.status;
 
